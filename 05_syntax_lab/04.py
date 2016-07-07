@@ -1,8 +1,11 @@
-"""
-Write a program that reads lines from the user
-until an empty line is inserted.
-After the user typed in an empty line,
-print all previously inserted lines in reverse
-order (from last to first)
-"""
 
+
+stack = []
+print "Enter your string"
+input = raw_input()
+while input != "":
+	stack.insert(len(stack), input)
+	input = raw_input()
+	
+while (len(stack) > 0):
+	print stack.pop(), "\n"
